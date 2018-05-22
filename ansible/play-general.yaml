@@ -1,0 +1,32 @@
+  - name: Install general apps
+    hosts: localhost
+    tasks:
+      - name: docker-for-mac
+        homebrew_cask:
+          name: docker 
+          state: latest
+      - name: visual-studio-code
+        homebrew_cask:
+          name: visual-studio-code
+          state: latest
+      - name: install node and npm
+        homebrew:
+          name: node
+          state: latest
+      - name: install python and pip
+        homebrew:
+          name: python
+          state: latest
+      - name: install awscli
+        pip:
+          name: awscli
+          executable: pip3
+      - name: Install dotnet core cli
+        shell: |
+         brew update
+         brew tap caskroom/cask
+         brew cask install dotnet 
+      - name: Install kdiff3
+        homebrew:
+          name: kdiff3
+          state: latest

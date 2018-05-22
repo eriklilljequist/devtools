@@ -1,0 +1,3 @@
+  - name: play roles
+    hosts: all
+    roles:
