@@ -27,6 +27,6 @@
          brew tap caskroom/cask
          brew cask install dotnet 
       - name: Install kdiff3
-        homebrew:
+        homebrew_cask:
           name: kdiff3
           state: latest
