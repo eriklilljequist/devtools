@@ -1,2 +1,5 @@
 - name: ansible-role-docker
   src: https://github.com/geerlingguy/ansible-role-docker
+
+- name: gantsign.visual-studio-code-extensions
+  src: https://github.com/gantsign/ansible-role-visual-studio-code-extensions.git
