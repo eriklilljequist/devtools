@@ -5,6 +5,7 @@
        users:
          - username: ethm7h
            visual_studio_code_extensions:
+              - PeterJausovec.vscode-docker
               - ms-python.python
               - ms-vscode.csharp
               - jchannon.csharpextensions
