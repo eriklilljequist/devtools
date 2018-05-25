@@ -1,6 +1,10 @@
   - name: Install general apps
     hosts: localhost
     tasks:
+      - name: install cntlm
+        homebrew:
+          name: cntlm
+          state: latest
       - name: install docker-for-mac
         homebrew_cask:
           name: docker 
