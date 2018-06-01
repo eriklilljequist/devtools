@@ -2,9 +2,10 @@
 #!/bin/bash
 
 echo '*** RUN PROXY ***'
+killall -9 cntlm
 sed s/USERNAME_HERE/`whoami`/ run_proxy.sample > .run_proxy
 source .run_proxy
 
 echo '*** Run ansible ***'
-ansible-galaxy install -r ansible/roles.yml
 ansible-playbook ansible/playbook.yml
+ansible-galaxy install -r ansible/roles.yml

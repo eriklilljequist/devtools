@@ -1,6 +1,14 @@
   - name: Install general apps
     hosts: localhost
     tasks:
+      - name: Install certbot
+        homebrew:
+          name: certbot
+          state: latest
+      - name: Install command line completion
+        homebrew:
+          name: bash-completion
+          state: latest
       - name: install cntlm
         homebrew:
           name: cntlm
