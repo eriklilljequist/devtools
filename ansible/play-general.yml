@@ -1,6 +1,19 @@
   - name: Install general apps
-    hosts: localhost
+    hosts: localhost  
     tasks:
+      - name: Install keepassx
+        homebrew_cask:
+          name: keepassx
+          state: latest
+      - name: install awscli
+        pip:
+          name: awscli
+          executable: pip3
+          state: latest
+      - name: Install kdiff3
+        homebrew_cask:
+          name: kdiff3
+          state: latest
       - name: Install certbot
         homebrew:
           name: certbot
@@ -25,27 +38,7 @@
         homebrew:
           name: node
           state: latest
-      - name: Install gulp
-        npm:
-          name: gulp
-          global: yes
-      - name: Install eslint
-        npm:
-          name: eslint
-          global: yes
-      - name: install python and pip
-        homebrew:
-          name: python
-          state: latest
-      - name: install awscli
-        pip:
-          name: awscli
-          executable: pip3
       - name: Install dotnet core sdk
         homebrew_cask:
           name: dotnet-sdk
-          state: latest
-      - name: Install kdiff3
-        homebrew_cask:
-          name: kdiff3
           state: latest

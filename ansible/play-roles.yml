@@ -1,19 +1,13 @@
   - name: play roles
     hosts: localhost
     roles:
-     - role: gantsign.visual-studio-code-extensions
-       users:
-         - username: ethm7h
-           visual_studio_code_extensions:
-              - PeterJausovec.vscode-docker
-              - ms-python.python
-              - ms-vscode.csharp
-              - jchannon.csharpextensions
-              - lperdomo.angular1-code-snippets-johnpapastyle
-              - herrherrmann.angular-bootstrap
-              - alexandersage.angular1-code-snippets
-              - abusaidm.html-snippets
-              - Zignd.html-css-class-completion
-              - donjayamanne.jquerysnippets
-              - donjayamanne.bower
-              - donjayamanne.githistory             
+    # - role: gantsign.visual-studio-code-extensions
+      # users:
+        # - username: {UNIX_USERNAME}
+          # visual_studio_code_extensions:
+             # - PeterJausovec.vscode-docker
+             # - ms-python.python
+             # - ms-vscode.csharp
+             # - jchannon.csharpextensions
+             # - donjayamanne.jquerysnippets
+             # - donjayamanne.githistory             
