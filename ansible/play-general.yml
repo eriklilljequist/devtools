@@ -1,9 +1,9 @@
   - name: Install general apps
     hosts: localhost  
     tasks:
-      - name: Install keepassx
+      - name: Install macpass
         homebrew_cask:
-          name: keepassx
+          name: macpass
           state: latest
       - name: install awscli
         pip:
