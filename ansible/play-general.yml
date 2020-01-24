@@ -1,6 +1,11 @@
   - name: Install general apps
     hosts: localhost  
     tasks:
+      # Kdiff3 is no longer avaialable in brew casks registry
+      # - name: Install kdiff3
+      #   homebrew_cask:
+      #     name: kdiff3
+      #     state: latest
       - name: Install macpass
         homebrew_cask:
           name: macpass
@@ -9,10 +14,6 @@
         pip:
           name: awscli
           executable: pip3
-          state: latest
-      - name: Install kdiff3
-        homebrew_cask:
-          name: kdiff3
           state: latest
       - name: Install certbot
         homebrew:
@@ -38,7 +39,4 @@
         homebrew:
           name: node
           state: latest
-      - name: Install dotnet core sdk
-        homebrew_cask:
-          name: dotnet-sdk
-          state: latest
+
