@@ -7,10 +7,8 @@
 `. .run_ansible`
 
 ## Work behind NTLM proxy
-
 Set varibles:
-- DOMAIN
-- PROXY_URL
-in .start_proxy
+- DOMAIN in .start_proxy
+- PROXY_URL in .start_proxy
 
 `. .start_proxy`
