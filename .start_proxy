@@ -1,5 +1,3 @@
-#!/bin/bash
-
 DOMAIN=
 PROXY_URL=
 
@@ -7,3 +5,4 @@ echo '*** RUN PROXY ***'
 killall -9 cntlm
 cat run_proxy.sample | sed s/USERNAME/`whoami`/ | sed "s/DOMAIN/$DOMAIN/" | sed "s/PROXY_URL/$PROXY_URL/" > .run_proxy
 source .run_proxy
+rm .run_proxy

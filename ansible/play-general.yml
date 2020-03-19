@@ -6,6 +6,10 @@
       #   homebrew_cask:
       #     name: kdiff3
       #     state: latest
+      - name: Install mysqlclient
+        homebrew:
+          name: mysql-client
+          state: latest
       - name: Install macpass
         homebrew_cask:
           name: macpass

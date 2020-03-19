@@ -1,0 +1,30 @@
+echo installing xcode developer tools
+xcode-select --install
+echo ------END
+echo
+
+echo Downloading and installing homebrew package manager
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+echo ------END
+echo
+
+echo updating git
+OLD_GIT_VERSION=`git --version`
+sudo mv /usr/bin/git /usr/bin/git-apple
+brew update && brew upgrade
+brew install git
+brew link --force git
+echo Old git version was $OLD_GIT_VERSION
+echo New git version is `git --version`
+echo -----END
+echo
+
+echo Installing ansible
+brew install ansible
+echo -----END
+echo
+
+echo Running ansible
+. .run_ansible
+echo -----END
+echo
