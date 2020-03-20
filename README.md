@@ -1,4 +1,4 @@
-# Provisioning of my macbook
+# Provisioning of MacOS
 
 ## Install system dependencies
 Install developer tools such as Git and Homebrew along with transient dependencies
