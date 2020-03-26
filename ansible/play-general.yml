@@ -6,6 +6,33 @@
       #   homebrew_cask:
       #     name: kdiff3
       #     state: latest
+      - name: install visual-studio-code
+        homebrew_cask:
+          name: visual-studio-code
+          state: latest
+      - name: Install vs code extensions
+        shell:
+          cmd: code --install-extension {{ item }}
+        with_items:
+          - dbaeumer.vscode-eslint 
+          - DotJoshJohnson.xml 
+          - humao.rest-client 
+          - marlon407.code-groovy 
+          - ms-azuretools.vscode-docker 
+          - ms-dotnettools.csharp 
+          - ms-python.python 
+          - octref.vetur 
+          - secanis.jenkinsfile-support 
+          - syler.sass-indented 
+          - sysoev.language-stylus
+      - name: Install burp suite
+        homebrew_cask:
+          name: burp-suite
+          state: present
+      - name: Install wireshark
+        homebrew:
+          name: wireshark
+          state: latest
       - name: Install mysqlclient
         homebrew:
           name: mysql-client
@@ -34,10 +61,6 @@
       - name: install docker-for-mac
         homebrew_cask:
           name: docker 
-          state: latest
-      - name: install visual-studio-code
-        homebrew_cask:
-          name: visual-studio-code
           state: latest
       - name: install node and npm
         homebrew:

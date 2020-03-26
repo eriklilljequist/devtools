@@ -1,13 +1,3 @@
-  - name: play roles
-    hosts: localhost
-    roles:
-    # - role: gantsign.visual-studio-code-extensions
-      # users:
-        # - username: {UNIX_USERNAME}
-          # visual_studio_code_extensions:
-             # - PeterJausovec.vscode-docker
-             # - ms-python.python
-             # - ms-vscode.csharp
-             # - jchannon.csharpextensions
-             # - donjayamanne.jquerysnippets
-             # - donjayamanne.githistory             
+- name: play roles
+  hosts: localhost
+  roles:
